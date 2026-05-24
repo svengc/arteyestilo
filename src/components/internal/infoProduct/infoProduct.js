@@ -1,5 +1,5 @@
 import { getPriceProducts } from "../../../controllers/catalog/priceProdudcts.js";
-import { productImgandShop } from "./infoProductTempate.js";
+import { cardProductTemplate } from "./infoProductTempate.js";
 
 export function productImgAndShop() {
 

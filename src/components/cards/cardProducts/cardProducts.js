@@ -1,9 +1,9 @@
 import { getPriceProducts } from "../../../controllers/catalog/priceProdudcts.js";
 import { cardProductTemplate } from "./cardProductsTemplate.js";
 
-export function cardProducts() {
+export function cardProduct() {
 
-    const container = document.querySelector(".productsCollections");
+    const container = document.querySelector(".cardProduct");
 
     if (!container) return;
 

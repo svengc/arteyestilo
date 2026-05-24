@@ -1,5 +1,6 @@
 import { categories } from "../../models/homeModel.js";
 
+
 export function initFilterCatalogMenu() {
 
     const container = document.getElementById("gridCategorias");
