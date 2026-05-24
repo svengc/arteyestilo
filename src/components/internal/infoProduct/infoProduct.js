@@ -2,6 +2,7 @@ import { getPriceProducts } from "../../../controllers/catalog/priceProdudcts.js
 import { productImgandShop } from "./infoProductTempate.js";
 
 export function productImgAndShop() {
+
     const container = document.querySelector(".productImgAndShop");
     if (!container) return;
 
@@ -9,11 +10,6 @@ export function productImgAndShop() {
     const id = params.get("id");
 
     const products = getPriceProducts();
-
-    if (!Array.isArray(products)) {
-        console.error("products no es un array");
-        return;
-    }
 
     const product = products.find(p => p.id === id);
 
