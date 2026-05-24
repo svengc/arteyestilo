@@ -1,7 +1,7 @@
 import { initNavbar } from "../../components/navbar/navbar.js";
-import { cardProduct } from "../../components/cards/cardProducts/cardProducts.js";
+import { productImgAndShop } from "../../components/internal/infoProduct/infoProduct.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     initNavbar();
-    cardProduct();
+    productImgAndShop();
 });

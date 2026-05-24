@@ -1,4 +1,4 @@
-import { getInfoCards } from "../../../controllers/essence/essenceController.js";
+import{ getInfoCards } from "../../../controllers/essence/essenceController.js";
 import { cardEssenceTemplate } from "./cardEssenceTemplate.js";
 
 export function cardEssence() {
@@ -10,6 +10,6 @@ export function cardEssence() {
     const infoCardEssence = getInfoCards();
 
     container.innerHTML = infoCardEssence
-        .map((essence, index) => cardEssenceTemplate(essence, index))
-        .join("");
+    .map((essence, index) => cardEssenceTemplate(essence, index))
+    .join("");  
 }

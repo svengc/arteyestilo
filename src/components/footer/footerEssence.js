@@ -2,7 +2,7 @@ export function footerEssence() {
     const bannerContacto = document.getElementById("footerEsencia");
     if (bannerContacto){
         bannerContacto.innerHTML = `
-            <img src="../../assets/img/banner-footer-esencial.jpg" class="w-full h-full object-cover" alt="">
+            <img src="../../assets/img/other/banner-footer-esencial.jpg" class="w-full h-full object-cover" alt="">
             <div
                 class="absolute inset-0 bg-[linear-gradient(to_right,rgba(12,10,8,0.9)_0%,rgba(12,10,8,0.7)_55%,rgba(12,10,8,0.3)_100%)]">
             </div>
