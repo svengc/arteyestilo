@@ -1,4 +1,5 @@
 export const productImgandShop = (product) => `
+    <a href="infoCardProducto.html?id=${product.id}" class="group">
     <div class="flex flex-col md:flex-row justify-center gap-4 mb-6 max-w-5xl mx-auto">
 
         <!-- IMÁGENES -->
