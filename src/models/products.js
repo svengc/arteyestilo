@@ -23,7 +23,7 @@ export const BDProducts = [
             "../../assets/img/catalogo/card-venta3.jpg",
             "../../assets/img/catalogo/card-venta4.jpg"
         ],
-        footerImage: "../../shared/assets/images/bnFooter_infoCatalogo/banner-venta.jpg"
+        footerImage: "../../assets/img/bnFooter_infoCatalogo/banner-venta.jpg"
     },
     {
         id: "prod-sofa-azul",
@@ -49,7 +49,7 @@ export const BDProducts = [
             "../../assets/img/catalogo/mueble-3.jpg",
             "../../assets/img/catalogo/mueble-4.jpg"
         ],
-        footerImage: "../../shared/assets/images/bnFooter_infoCatalogo/muebles.jpg"
+        footerImage: "../../assets/img/bnFooter_infoCatalogo/muebles.jpg"
     },
     {
         id: "prod-aparador-nordico",
@@ -75,7 +75,7 @@ export const BDProducts = [
             "../../assets/img/catalogo/mesa-3.jpg",
             "../../assets/img/catalogo/mesa-4.jpg"
         ],
-        footerImage: "../../shared/assets/images/bnFooter_infoCatalogo/banner-silla.jpg"
+        footerImage: "../../assets/img/bnFooter_infoCatalogo/banner-silla.jpg"
     },
     {
         id: "prod-comedor-ratan",
@@ -101,7 +101,7 @@ export const BDProducts = [
             "../../assets/img/catalogo/comedor2-3.jpg",
             "../../assets/img/catalogo/comedor2-4.jpg"
         ],
-        footerImage: "../../shared/assets/images/bnFooter_infoCatalogo/muebles.jpg"
+        footerImage: "../../assets/img/bnFooter_infoCatalogo/muebles.jpg"
     },
     {
         id: "prod-mesa-organica",
@@ -127,7 +127,7 @@ export const BDProducts = [
             "../../assets/img/catalogo/mesa-3.jpg",
             "../../assets/img/catalogo/mesa-4.jpg"
         ],
-        footerImage: "../../shared/assets/images/bnFooter_infoCatalogo/banner-silla.jpg"
+        footerImage: "../../assets/img/bnFooter_infoCatalogo/banner-silla.jpg"
     },
     {
         id: "prod-sillon-acento",
@@ -153,6 +153,6 @@ export const BDProducts = [
             "../../assets/img/catalogo/silla-tapizada-3.jpg",
             "../../assets/img/catalogo/silla-tapizada-4.jpg"
         ],
-        footerImage: "../../shared/assets/images/bnFooter_infoCatalogo/banner-silla-tapizada.jpg"
+        footerImage: "../../assets/img/bnFooter_infoCatalogo/banner-silla-tapizada.jpg"
     }
 ];

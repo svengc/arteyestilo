@@ -1,10 +1,10 @@
 import { initNavbar } from "../../components/navbar/navbar.js";
-import { initInfoProduct,secondInfoProduct } from "../../components/internal/infoProduct/infoProduct.js";
+import { initInfoProductDiscount,secondInfoProductDiscount } from "../../components/internal/infoProductDiscount/infoProductDiscount.js";
 import { initfooterInfoProductCard } from "../../controllers/infoCardProducts/infoCardProductsController.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     initNavbar();
-    initInfoProduct();
-    secondInfoProduct();
+    initInfoProductDiscount();
+    secondInfoProductDiscount();
     initfooterInfoProductCard();
 });

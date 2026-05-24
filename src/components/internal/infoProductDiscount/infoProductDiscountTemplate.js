@@ -1,4 +1,4 @@
-export const productImgandShop = (product) => `
+export const productImgandShopDiscount = (product) => `
     <div class="flex flex-col md:flex-row justify-center gap-4 mb-6 max-w-5xl mx-auto">
 
         <div class="grid grid-cols-2 auto-rows-[140px] md:auto-rows-[180px] gap-4 w-full md:w-1/2">
@@ -16,9 +16,12 @@ export const productImgandShop = (product) => `
                     </h1>
                 </div>
 
-                <div class="flex flex-col gap-2 w-2/5">
+                <div class="flex gap-2 w-2/5">
+                    <p class="text-sm md:text-lg font-montserrat text-paragraph ">
+                        Antes <br> <span class = "line-through">$${product.price.toLocaleString()}</span>
+                    </p>
                     <p class="text-sm md:text-lg font-montserrat text-paragraph">
-                        $${product.price.toLocaleString()}
+                        Ahora <br> $${product.compareAtPrice.toLocaleString()}
                     </p>
                 </div>
 
@@ -45,7 +48,7 @@ export const productImgandShop = (product) => `
     </div>
 `;
 
-export const productDescription = (product) => `
+export const productDescriptionDiscount = (product) => `
 <div class="max-w-5xl mx-auto px-5 md:px-0 flex flex-col md:flex-row gap-6 mb-10">
     <div class="w-full md:w-1/2 flex flex-col justify-center gap-4 mx-auto">
                 <h2 class="font-semibold text-2xl md:text-3xl font-cormorant tracking-wide text-title">
@@ -117,5 +120,4 @@ export const productDescription = (product) => `
                 </div>
             </div>
 </div>
-
 `;

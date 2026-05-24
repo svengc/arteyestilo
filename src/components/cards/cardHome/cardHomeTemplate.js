@@ -2,7 +2,7 @@
 
 export const cardHomeTemplate = (product) => `
     <a
-        href="#"
+        href="/src/pages/infoCardProduct/infoCardProduct.html?id=${product.id}"
         class="group relative h-[350px] md:h-[400px] w-[250px] flex-shrink-0 overflow-hidden rounded-2xl transition-transform duration-300 hover:scale-105 md:w-[350px]"
         style="
             background-image:url('${product.images[0]}');
@@ -29,7 +29,7 @@ export const cardHomeTemplate = (product) => `
 
 export const cardHomeTemplateDiscount = (product) => `
     <a
-        href="#"
+        href="/src/pages/infoCardProductDiscount/infoCardProductDiscount.html?id=${product.id}"
         class="group relative h-[350px] md:h-[400px] w-[250px] flex-shrink-0 overflow-hidden rounded-2xl transition-transform duration-300 hover:scale-105 md:w-[350px]"
         style="
             background-image:url('${product.images[0]}');

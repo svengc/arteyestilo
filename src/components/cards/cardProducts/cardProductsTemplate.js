@@ -1,6 +1,6 @@
 export const cardProductTemplate = (product) => `
     <a
-        href="../../../pages/infoCardProduct/infoCardProduct.html?id=${product.id}"
+        href="/src/pages/infoCardProduct/infoCardProduct.html?id=${product.id}"
         class="group relative h-[300px] md:h-[400px] w-full overflow-hidden rounded-2xl transition-transform duration-300 hover:scale-105"
         style="
             background-image:url('${product.images[0]}');

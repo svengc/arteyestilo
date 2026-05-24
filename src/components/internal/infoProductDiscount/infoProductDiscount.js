@@ -1,23 +1,15 @@
 import { getPriceProducts } from "../../../controllers/catalog/priceProdudcts.js";
-import { productImgandShop, productDescription } from "./infoProductTemplate.js";
+import { productImgandShopDiscount, productDescriptionDiscount } from "./infoProductDiscountTemplate.js";
 
-export function initInfoProduct() {
-    console.log("🔥 initInfoProduct cargó");
-
-        const params = new URLSearchParams(window.location.search);
-        const id = params.get("id") || "prod-bambu-natural";
-
-    console.log("🧩 ID de la URL:", id);
+export function initInfoProductDiscount() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id") || "prod-bambu-natural";
 
     const products = getPriceProducts();
-    console.log("📦 productos:", products);
 
     const product = products.find(p => p.id === id);
 
-    console.log("🎯 producto encontrado:", product);
-
-    const container = document.querySelector(".productDetail");
-    console.log("📍 container:", container);
+    const container = document.querySelector(".productDetailDiscount");
 
     if (!container) {
         console.error("❌ NO existe .productDetail en el HTML");
@@ -29,9 +21,10 @@ export function initInfoProduct() {
         return;
     }
 
-    container.innerHTML = productImgandShop(product);
+    container.innerHTML = productImgandShopDiscount(product);
+
 }
-export function secondInfoProduct() {
+export function secondInfoProductDiscount() {
     console.log("🔥 initInfoProduct cargó");
 
         const params = new URLSearchParams(window.location.search);
@@ -46,7 +39,7 @@ export function secondInfoProduct() {
 
     console.log("🎯 producto encontrado:", product);
 
-    const container = document.querySelector(".productDetailInfo");
+    const container = document.querySelector(".productDetailInfoDiscount");
     console.log("📍 container:", container);
 
     if (!container) {
@@ -59,5 +52,5 @@ export function secondInfoProduct() {
         return;
     }
 
-    container.innerHTML = productDescription(product);
+    container.innerHTML = productDescriptionDiscount(product);
 }
