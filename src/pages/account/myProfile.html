@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi perfil</title>
+</head>
+
+<body class="bg-principal">
+    <header class="sticky top-0 z-40 backdrop-blur-sm bg-[rgba(92,122,107,0.92)]">
+        <nav class="max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-4 grid grid-cols-[1fr_auto] items-center gap-4">
+            <a href="../home/home.html" class="text-white font-cormorant text-xl md:text-3xl tracking-[0.18em] uppercase">
+                Arte & Estilo
+            </a>
+            <div class="flex items-center justify-end gap-2 md:gap-3">
+                <a href="../home/home.html"
+                    class="hidden md:inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-3 text-xs uppercase tracking-[0.28em] text-white/80 hover:bg-white/10 hover:text-white font-montserrat transition">
+                    Tienda
+                </a>
+                <a href="../collections/collections.html"
+                    class="hidden md:inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-3 text-xs uppercase tracking-[0.28em] text-white/80 hover:bg-white/10 hover:text-white font-montserrat transition">
+                    Ver catálogo
+                </a>
+                <a id="adminAccessLink" href="../../controllers/admin/adminPage/admin.html"
+                    class="hidden md:inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-3 text-xs uppercase tracking-[0.28em] text-white/80 hover:bg-white/10 hover:text-white font-montserrat transition">
+                    Admin
+                </a>
+                <button id="logoutIconButton" type="button"
+                    class="h-11 w-11 flex items-center justify-center rounded-full border border-white/15 bg-white/5 hover:bg-white/10 transition"
+                    aria-label="Cerrar sesión">
+                    <img src="../../assets/icons/exit.svg" alt="Cerrar sesión" class="h-5 w-5">
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-5 md:px-8 py-6 md:py-8">
+        <section class="bg-white rounded-2xl border border-subrayado p-5 md:p-8 my-2">
+            <div class="grid gap-6 md:grid-cols-[140px_1fr_auto] items-center px-2 py-4">
+                <div class="w-32 h-32 rounded-2xl overflow-hidden mx-auto">
+                    <img src="../../assets/img/other/photo-profile.jpg" alt="Perfil" class="w-full h-full object-cover">
+                </div>
+                <div class="text-center md:text-left">
+                    <p class="text-xs uppercase tracking-widest font-montserrat text_numeral_alt">Mi cuenta</p>
+                    <h1 id="profileName" class="text-3xl md:text-4xl font-cormorant text-title mt-2">Usuario</h1>
+                    <p id="profileEmail" class="font-montserrat text-sm md:text-base text-paragraph mt-2"></p>
+                    <p id="profileMeta" class="font-montserrat text-xs text-title-alt mt-2"></p>
+                </div>
+                <div class="flex flex-col gap-3 justify-center md:justify-end">
+                    <a href="../home/home.html"
+                        class="border border-subrayado px-5 py-3 rounded-lg text-xs uppercase tracking-widest font-montserrat text-title text-center">
+                        Regresar a la tienda
+                    </a>
+                    <button id="toggleProfileForm" type="button"
+                        class="bg-btn text-btn px-5 py-3 rounded-lg text-xs uppercase tracking-widest font-montserrat">
+                        Editar perfil
+                    </button>
+                    <button id="logoutSectionButton" type="button"
+                        class="border border-subrayado px-5 py-3 rounded-lg text-xs uppercase tracking-widest font-montserrat text-title">
+                        Cerrar sesión
+                    </button>
+                </div>
+            </div>
+
+            <div id="profileFormWrap" class="hidden mt-6 pt-6 border-t border-subrayado">
+                <form id="profileForm" class="grid gap-5 md:grid-cols-2 py-4 px-2">
+                    <div>
+                        <label for="profileFirstName" class="block text-xs uppercase tracking-widest font-montserrat text_numeral_alt mb-2">Nombre</label>
+                        <input id="profileFirstName" class="w-full border border-subrayado rounded-lg px-4 py-3 font-montserrat text-sm">
+                    </div>
+                    <div>
+                        <label for="profileLastName" class="block text-xs uppercase tracking-widest font-montserrat text_numeral_alt mb-2">Apellido</label>
+                        <input id="profileLastName" class="w-full border border-subrayado rounded-lg px-4 py-3 font-montserrat text-sm">
+                    </div>
+                    <div>
+                        <label for="profilePhoneInput" class="block text-xs uppercase tracking-widest font-montserrat text_numeral_alt mb-2">Teléfono</label>
+                        <input id="profilePhoneInput" class="w-full border border-subrayado rounded-lg px-4 py-3 font-montserrat text-sm">
+                    </div>
+                    <div>
+                        <label for="profileCityInput" class="block text-xs uppercase tracking-widest font-montserrat text_numeral_alt mb-2">Ciudad</label>
+                        <input id="profileCityInput" class="w-full border border-subrayado rounded-lg px-4 py-3 font-montserrat text-sm">
+                    </div>
+                    <div class="md:col-span-2 flex gap-3">
+                        <button type="submit" class="bg-btn text-btn px-5 py-3 rounded-lg text-xs uppercase tracking-widest font-montserrat">Guardar cambios</button>
+                        <button id="cancelProfileForm" type="button" class="border border-subrayado px-5 py-3 rounded-lg text-xs uppercase tracking-widest font-montserrat text-title">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <p id="profileMessage" class="font-montserrat text-sm text-title-alt px-1"></p>
+
+        <section class="grid gap-5 lg:grid-cols-2">
+            <article class="border border-subrayado rounded-2xl overflow-hidden bg-white">
+                <div class="bg-cards px-5 py-4">
+                    <p class="text-xs uppercase tracking-widest font-montserrat text_numeral_alt">01 — Cuenta</p>
+                    <h2 class="text-xl md:text-2xl font-cormorant text-title mt-2">Datos personales</h2>
+                </div>
+                <div class="grid gap-4 md:grid-cols-2 px-5 py-5">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest font-montserrat text_numeral_alt">Nombre completo</p>
+                        <p id="personalName" class="font-montserrat text-lg text-title mt-2"></p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest font-montserrat text_numeral_alt">Correo electrónico</p>
+                        <p id="personalEmail" class="font-montserrat text-lg text-title mt-2"></p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest font-montserrat text_numeral_alt">Teléfono</p>
+                        <p id="personalPhone" class="font-montserrat text-lg text-title mt-2"></p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest font-montserrat text_numeral_alt">Ciudad</p>
+                        <p id="personalCity" class="font-montserrat text-lg text-title mt-2"></p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="border border-subrayado rounded-2xl overflow-hidden bg-white">
+                <div class="bg-cards px-5 py-4 flex items-center justify-between gap-4">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest font-montserrat text_numeral_alt">02 — Carrito</p>
+                        <h2 class="text-xl md:text-2xl font-cormorant text-title mt-2">Tu compra actual</h2>
+                    </div>
+                    <button id="checkoutButton" type="button"
+                        class="bg-btn text-btn px-4 py-3 rounded-lg text-xs uppercase tracking-widest font-montserrat">
+                        Finalizar
+                    </button>
+                </div>
+                <div class="px-5 py-5">
+                    <div id="cartItems" class="space-y-4"></div>
+                    <div class="mt-5 pt-4 border-t border-subrayado flex items-center justify-between">
+                        <span class="font-montserrat text-sm text-paragraph">Total</span>
+                        <strong id="cartTotal" class="font-cormorant text-2xl text-title">$0</strong>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="grid gap-5 lg:grid-cols-2">
+            <article class="border border-subrayado rounded-2xl overflow-hidden bg-white">
+                <div class="bg-cards px-5 py-4 flex items-center justify-between gap-4">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest font-montserrat text_numeral_alt">03 — Envío</p>
+                        <h2 class="text-xl md:text-2xl font-cormorant text-title mt-2">Direcciones</h2>
+                    </div>
+                    <button id="toggleAddressForm" type="button"
+                        class="border border-subrayado bg-white px-4 py-3 rounded-lg text-xs uppercase tracking-widest font-montserrat text-title">
+                        Agregar
+                    </button>
+                </div>
+                <div class="px-5 py-5">
+                    <div id="addressFormWrap" class="hidden mb-5 pb-5 border-b border-subrayado">
+                        <form id="addressForm" class="space-y-4">
+                            <div>
+                                <label for="addressLabel" class="block text-xs uppercase tracking-widest font-montserrat text_numeral_alt mb-2">Etiqueta</label>
+                                <input id="addressLabel" class="w-full border border-subrayado rounded-lg px-4 py-3 font-montserrat text-sm" placeholder="Principal">
+                            </div>
+                            <div>
+                                <label for="addressLine" class="block text-xs uppercase tracking-widest font-montserrat text_numeral_alt mb-2">Dirección</label>
+                                <input id="addressLine" class="w-full border border-subrayado rounded-lg px-4 py-3 font-montserrat text-sm" placeholder="Calle 10 # 43E-28">
+                            </div>
+                            <div class="grid gap-4 md:grid-cols-2">
+                                <div>
+                                    <label for="addressCity" class="block text-xs uppercase tracking-widest font-montserrat text_numeral_alt mb-2">Ciudad</label>
+                                    <input id="addressCity" class="w-full border border-subrayado rounded-lg px-4 py-3 font-montserrat text-sm" placeholder="Medellín">
+                                </div>
+                                <div>
+                                    <label for="addressRegion" class="block text-xs uppercase tracking-widest font-montserrat text_numeral_alt mb-2">Región</label>
+                                    <input id="addressRegion" class="w-full border border-subrayado rounded-lg px-4 py-3 font-montserrat text-sm" placeholder="Colombia">
+                                </div>
+                            </div>
+                            <div class="flex gap-3">
+                                <button type="submit" class="bg-btn text-btn px-4 py-3 rounded-lg text-xs uppercase tracking-widest font-montserrat">Guardar</button>
+                                <button id="cancelAddressForm" type="button" class="border border-subrayado px-4 py-3 rounded-lg text-xs uppercase tracking-widest font-montserrat text-title">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="addressList" class="space-y-4"></div>
+                </div>
+            </article>
+
+            <article class="border border-subrayado rounded-2xl overflow-hidden bg-white">
+                <div class="bg-cards px-5 py-4 flex items-center justify-between gap-4">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest font-montserrat text_numeral_alt">04 — Pago</p>
+                        <h2 class="text-xl md:text-2xl font-cormorant text-title mt-2">Métodos de pago</h2>
+                    </div>
+                    <button id="togglePaymentForm" type="button"
+                        class="border border-subrayado bg-white px-4 py-3 rounded-lg text-xs uppercase tracking-widest font-montserrat text-title">
+                        Agregar
+                    </button>
+                </div>
+                <div class="px-5 py-5">
+                    <div id="paymentFormWrap" class="hidden mb-5 pb-5 border-b border-subrayado">
+                        <form id="paymentForm" class="space-y-4">
+                            <div class="grid gap-4 md:grid-cols-3">
+                                <div>
+                                    <label for="paymentBrand" class="block text-xs uppercase tracking-widest font-montserrat text_numeral_alt mb-2">Tipo</label>
+                                    <input id="paymentBrand" class="w-full border border-subrayado rounded-lg px-4 py-3 font-montserrat text-sm" placeholder="Visa">
+                                </div>
+                                <div>
+                                    <label for="paymentLast4" class="block text-xs uppercase tracking-widest font-montserrat text_numeral_alt mb-2">Últimos 4</label>
+                                    <input id="paymentLast4" maxlength="4" class="w-full border border-subrayado rounded-lg px-4 py-3 font-montserrat text-sm" placeholder="4821">
+                                </div>
+                                <div>
+                                    <label for="paymentExpiry" class="block text-xs uppercase tracking-widest font-montserrat text_numeral_alt mb-2">Vence</label>
+                                    <input id="paymentExpiry" class="w-full border border-subrayado rounded-lg px-4 py-3 font-montserrat text-sm" placeholder="08/27">
+                                </div>
+                            </div>
+                            <div class="flex gap-3">
+                                <button type="submit" class="bg-btn text-btn px-4 py-3 rounded-lg text-xs uppercase tracking-widest font-montserrat">Guardar</button>
+                                <button id="cancelPaymentForm" type="button" class="border border-subrayado px-4 py-3 rounded-lg text-xs uppercase tracking-widest font-montserrat text-title">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="paymentList" class="space-y-4"></div>
+                </div>
+            </article>
+        </section>
+
+        <section class="grid gap-5 lg:grid-cols-2">
+            <article class="border border-subrayado rounded-2xl overflow-hidden bg-white">
+                <div class="bg-cards px-5 py-4 flex items-center justify-between gap-4">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest font-montserrat text_numeral_alt">05 — Compras</p>
+                        <h2 class="text-xl md:text-2xl font-cormorant text-title mt-2">Historial de pedidos</h2>
+                    </div>
+                    <a href="../collections/collections.html" class="text-xs uppercase tracking-widest font-montserrat text-title">
+                        Seguir comprando
+                    </a>
+                </div>
+                <div id="ordersList" class="px-5 py-5 space-y-4"></div>
+            </article>
+
+            <article class="border border-subrayado rounded-2xl overflow-hidden bg-white">
+                <div class="bg-cards px-5 py-4 flex items-center justify-between gap-4">
+                    <div>
+                        <p class="text-xs uppercase tracking-widest font-montserrat text_numeral_alt">06 — Guardados</p>
+                        <h2 class="text-xl md:text-2xl font-cormorant text-title mt-2">Mis favoritos</h2>
+                    </div>
+                    <a href="../collections/collections.html" class="text-xs uppercase tracking-widest font-montserrat text-title">
+                        Ver catálogo
+                    </a>
+                </div>
+                <div id="favoritesList" class="px-5 py-5 grid gap-4 md:grid-cols-2"></div>
+            </article>
+        </section>
+
+    </main>
+
+    <script type="module" src="../../features/account/profile.controller.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>

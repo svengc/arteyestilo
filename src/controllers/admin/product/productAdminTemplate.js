@@ -1,0 +1,1 @@
+export const productAdminTemplate = (product) => `<div class="max-w-5xl mx-auto px-5 md:px-0 flex flex-col md:flex-row gap-6 mb-10">`

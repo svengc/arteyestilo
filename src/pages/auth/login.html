@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<body>
+    <main class="flex min-h-screen">
+        <aside class="w-2/5 hidden md:block h-screen relative">
+            <img src="../../assets/img/other/comedores.jpg" alt="comedor" class="absolute w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/70"></div>
+            <div class="relative z-10 flex flex-col h-full px-4 gap-4">
+                <div class="flex flex-col gap-1 md:gap-2 mr-auto py-10 px-9">
+                    <h1 class="text-3xl md:text-6xl text-banner tracking-wide font-cormorant">
+                        Arte & Estilo
+                    </h1>
+                    <p class="text-xs md:text-md text-form tracking-wider uppercase font-montserrat">
+                        Mueblería & Artículos de Hogar
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-1 md:gap-5 mr-auto py-10 px-9 mt-auto">
+                    <hr class="w-full md:w-1/2 mr-auto border-subrayado">
+                    <div class="w-3/4 flex flex-col">
+                        <div class="flex flex-col md:items-start text-center md:text-left my-2">
+                            <h2 class="text-md md:text-3xl font-montserrat text-btn">
+                                Cada espacio cuenta una historia. <em>La tuya empieza aquí.</em>
+                            </h2>
+                        </div>
+                        <div class="flex flex-col md:items-start text-center md:text-left my-2">
+                            <p class="text-sm md:text-lg font-cormorant tracking-wider uppercase text-title-alt">
+                                Arte & Estilo — Medellín
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section class="w-full md:w-3/5 flex flex-col justify-center h-full px-8 my-auto">
+            <div
+                class="flex items-center justify-start gap-1 md:gap-4 my-2 w-full md:w-3/4 pb-4 md:pb-10">
+                <a href="../home/home.html" class="text-xs md:text-sm font-cormorant uppercase tracking-wider text_numeral_alt hover:underline">
+                    ← Volver
+                </a>
+            </div>
+            <div class="md:hidden flex flex-col gap-1 md:gap-3 items-center md:items-start my-4">
+                <h1 class="text-3xl md:text-6xl text-title tracking-wide font-cormorant">
+                    Arte & Estilo
+                </h1>
+                <p class="text-xs md:text-md text_numeral_alt tracking-wide font-montserrat">
+                    Mueblería & Artículos de Hogar
+                </p>
+            </div>
+            <div class="max-w-7xl flex flex-col items-start justify-center py-4 gap-2">
+                <h4 class="text-xs md:text-md font-cormorant tracking-wider text_numeral_alt uppercase">
+                    Mi cuenta
+                </h4>
+                <h2 class="text-3xl md:text-5xl font-cormorant tracking-wide text-title">
+                    Bienvenido <em class="text_numeral_alt">de vuelta.</em>
+                </h2>
+                <p class="text-sm md:text-lg font-montserrat tracking-normal text-paragraph">
+                    Ingresa a tu cuenta para ver tus pedidos, favoritos y mucho más.
+                </p>
+            </div>
+            <form action="" class="max-w-7xl flex flex-wrap gap-4 my-4">
+                <div class="w-full md:w-3/4">
+                    <label for="email"
+                        class="block font-cormorant tracking-wider text-xs text-banner md:text-sm uppercase mb-1">correo
+                        electronico</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com"
+                        class="w-full border border-subrayado text-paragraph rounded-md px-3 py-2 focus:outline-none focus:ring focus:border-colection">
+                </div>
+                <div class="w-full md:w-3/4">
+                    <label for="contraseña"
+                        class="block font-cormorant tracking-wider text-xs text-banner md:text-sm uppercase mb-1">contraseña</label>
+                    <input type="password" id="contraseña" name="contraseña" placeholder="*******"
+                        class="w-full border border-subrayado text-paragraph rounded-md px-3 py-2 focus:outline-none focus:ring focus:border-colection">
+                </div>
+                <div
+                    class="flex md:flex-row items-center justify-center md:justify-end gap-1 md:gap-4 my-2 w-full md:w-3/4">
+                    <a href="../auth/forgivePassword.html"
+                        class="text-sm md:text-md font-montserrat tracking-wider text_numeral_alt hover:underline">
+                        ¿Olvidaste tu contraseña?
+                    </a>
+                </div>
+                <div class=" w-full md:w-3/4 mt-4">
+                    <button id="btnLogin" type="button"
+                        class="bg-btn text-btn uppercase py-1 md:py-2 rounded-md font-montserrat tracking-wide hover:bg-cards focus:ring focus:border-colection transition w-full">
+                        Enviar
+                    </button>
+                </div>
+                <p id="authMessage" class="w-full md:w-3/4 text-sm font-montserrat text-title-alt"></p>
+            </form>
+            <hr class="w-full md:w-3/4 my-4 mr-auto border-subrayado">
+            <div class="flex items-center w-full md:w-3/4 my-5">
+    
+                <div class="flex-1 h-px linea-primaria"></div>
+                
+                <p class="px-3 text-xs md:text-md font-montserrat tracking-normal text-paragraph whitespace-nowrap">
+                    ¿Aún no tienes cuenta?
+                </p>
+                
+                <div class="flex-1 h-px linea-primaria"></div>
+            
+            </div>
+            <div
+                class="flex flex-col items-center justify-center md:justify-start gap-1 md:gap-2 my-4 w-full md:w-3/4">
+                <p class="text-xs md:text-md font-montserrat tracking-normal text-paragraph">
+                    Crea tu cuenta gratis y accede a todas las colecciones.
+                </p>
+                <a href="./register.html" class="text-xs md:text-xs font-montserrat tracking-wider text_numeral_alt hover:underline">
+                    Registrarme ahora →
+                </a>
+            </div>
+            <div
+                class="flex items-center justify-center gap-1 my-4 w-full md:w-3/4">
+                <p class="text-xs md:text-md font-cormorant tracking-normal text-paragraph text-center">
+                    Al ingresar aceptas nuestros <a href="../legal/terminosUso.html" class="text-xs md:text-md font-cormorant tracking-wider text_cta_alt hover:underline">
+                        Términos de uso
+                    </a> y <a href="../legal/politicaUso.html" class="text-xs md:text-ms font-cormorant tracking-wider text_cta_alt hover:underline">
+                        Política de privacidad
+                    </a>
+                </p>
+                
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="../../features/auth/login.controller.js"></script>
+</body> 
+</html>
