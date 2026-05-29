@@ -10,7 +10,8 @@ export const tableProductTemplate = (products) => `
 
     <div class="mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
 
-        <div class="grid grid-cols-11 gap-4 bg-[#5C7A6B] text-white p-5 font-semibold text-sm uppercase tracking-wide">
+        <!-- HEADER -->
+        <div class="grid grid-cols-10 gap-4 bg-[#5C7A6B] text-white p-5 font-semibold text-sm uppercase tracking-wide">
 
             <div>ID</div>
             <div>Imagen</div>
@@ -27,10 +28,15 @@ export const tableProductTemplate = (products) => `
 
         ${products.map(product => `
 
-            <div class="grid grid-cols-10 gap-5 items-center p-5 border-b">
+            <div 
+                class="grid grid-cols-10 gap-5 items-center p-5 border-b"
+                data-id="${product.id}"
+            >
 
+                <!-- ID -->
                 <div>${product.id}</div>
 
+                <!-- IMG -->
                 <div>
                     <img 
                         src="${product.images[0]}" 
@@ -38,31 +44,115 @@ export const tableProductTemplate = (products) => `
                     >
                 </div>
 
-                <div>${product.name}</div>
-
+                <!-- NAME -->
                 <div>
-                    $${product.price.toLocaleString()}
+                    <span class="text-value">
+                        ${product.name}
+                    </span>
+
+                    <input 
+                        type="text"
+                        value="${product.name}"
+                        class="edit-input hidden border rounded-lg px-2 py-1 w-full"
+                    >
                 </div>
 
+                <!-- PRICE -->
                 <div>
-                    $${product.compareAtPrice.toLocaleString()}
+                    <span class="text-value">
+                        ${product.price}
+                    </span>
+
+                    <input 
+                        type="number"
+                        value="${product.price}"
+                        class="edit-input hidden border rounded-lg px-2 py-1 w-full"
+                    >
                 </div>
 
-                <div>${product.category}</div>
+                <!-- DISCOUNT -->
+                <div>
+                    <span class="text-value">
+                        ${product.compareAtPrice}
+                    </span>
 
-                <div>${product.material}</div>
+                    <input 
+                        type="number"
+                        value="${product.compareAtPrice}"
+                        class="edit-input hidden border rounded-lg px-2 py-1 w-full"
+                    >
+                </div>
 
-                <div>${product.style}</div>
+                <!-- CATEGORY -->
+                <div>
+                    <span class="text-value">
+                        ${product.category}
+                    </span>
 
-                <div>${product.stock}</div>
+                    <input 
+                        type="text"
+                        value="${product.category}"
+                        class="edit-input hidden border rounded-lg px-2 py-1 w-full"
+                    >
+                </div>
 
+                <!-- MATERIAL -->
+                <div>
+                    <span class="text-value">
+                        ${product.material}
+                    </span>
+
+                    <input 
+                        type="text"
+                        value="${product.material}"
+                        class="edit-input hidden border rounded-lg px-2 py-1 w-full"
+                    >
+                </div>
+
+                <!-- STYLE -->
+                <div>
+                    <span class="text-value">
+                        ${product.style}
+                    </span>
+
+                    <input 
+                        type="text"
+                        value="${product.style}"
+                        class="edit-input hidden border rounded-lg px-2 py-1 w-full"
+                    >
+                </div>
+
+                <!-- STOCK -->
+                <div>
+                    <span class="text-value">
+                        ${product.stock}
+                    </span>
+
+                    <input 
+                        type="number"
+                        value="${product.stock}"
+                        class="edit-input hidden border rounded-lg px-2 py-1 w-full"
+                    >
+                </div>
+
+                <!-- ACTIONS -->
                 <div class="flex gap-2">
 
-                    <button class="bg-blue-500 text-white px-3 py-2 rounded-xl">
+                    <button 
+                        class="edit-btn bg-blue-500 text-white px-3 py-2 rounded-xl"
+                    >
                         Editar
                     </button>
 
-                    <button class="bg-red-500 text-white px-3 py-2 rounded-xl">
+                    <button 
+                        class="save-btn hidden bg-green-500 text-white px-3 py-2 rounded-xl"
+                    >
+                        Guardar
+                    </button>
+
+                    <button 
+                        class="bg-red-500 text-white px-3 py-2 rounded-xl"
+                    >
                         Eliminar
                     </button>
 
