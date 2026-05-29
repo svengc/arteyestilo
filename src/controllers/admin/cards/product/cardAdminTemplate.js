@@ -14,7 +14,7 @@ export const cardProdTemplate = () => `
                 style="background-image:url('https://placehold.co/300x400')"
             ></div>
 
-            <div class="h-1/2 bg-red-100 flex flex-col items-center justify-center">
+            <div class="h-1/2 bg-red-100 flex flex-col items-center justify-center px-4">
 
                 <h2 class="text-xl font-semibold mb-4">
                     Producto sin descuento
@@ -39,7 +39,7 @@ export const cardProdTemplate = () => `
                 style="background-image:url('https://placehold.co/300x400')"
             ></div>
 
-            <div class="h-1/2 bg-green-100 flex flex-col items-center justify-center">
+            <div class="h-1/2 bg-green-100 flex flex-col items-center justify-center px-4">
 
                 <h2 class="text-xl font-semibold mb-4">
                     Producto con descuento
