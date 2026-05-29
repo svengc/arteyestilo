@@ -1,7 +1,7 @@
 export const STORAGE_KEYS = {
     PRODUCTS: "arteyestilo_products",
 };
- 
+
 export function getStorage(key, fallback = null) {
     try {
         const rawValue = localStorage.getItem(key);
@@ -12,16 +12,16 @@ export function getStorage(key, fallback = null) {
         return fallback;
     }
 }
- 
+
 export function createStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
     return value;
 }
- 
+
 export function clearStorage(key) {
     localStorage.removeItem(key);
 }
- 
+
 export function updateStorage(key, updater, fallback = null) {
     const currentValue = getStorage(key, fallback);
     const nextValue = updater(currentValue);

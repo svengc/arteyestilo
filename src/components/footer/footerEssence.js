@@ -22,7 +22,7 @@ export function footerEssence() {
                         Más que mobiliario, ofrecemos el arte de vivir bien...
                     </p>
                     <div class="mt-4 flex items-center gap-3 md:gap-4">
-                        <a href="./colecciones.html"
+                        <a href="../../pages/collections/collections.html"
                             class="bg-olive-600 text-white text-xs md:text-sm font-medium uppercase px-3 py-1.5 md:px-5 md:py-2 rounded transition bg-btn ">
                             <span class="block md:hidden font-montserrat text-btn">Explora la colección</span>
                             <span class="hidden md:block font-montserrat text-btn">Explora la colección</span>

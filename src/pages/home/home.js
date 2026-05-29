@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bannerSecondario = document.getElementById("bannerSecundario");
     if (bannerSecondario){
         bannerSecondario.innerHTML = `
-        <section class="relative mb-4 h-[350px] md:h-[650px] overflow-hidden">
+        <section class="relative mb-4 h-[350px] md:h-[650px] overflow-hidden bg-entregado">
             <!-- Imagen -->
             <img
                 src="../../assets/img/other/banner-comedor.jpg"
@@ -42,10 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
             >
             <!-- Contenido -->
             <div class="absolute inset-y-0 right-0 flex w-2/3 flex-col items-end justify-center gap-4 px-6 text-end">
-                <p class="max-w-2xl font-cormorant text-xl md:text-4xl font-bold leading-snug tracking-wide text-black">
+                <p class="text-title-alt max-w-2xl font-cormorant text-xl md:text-4xl font-bold leading-snug tracking-wide text-black">
                     A veces un solo mueble lo cambia todo.
                 </p>
-                <span class="max-w-xl font-montserrat text-sm md:text-lg text-black/80">
+                <span class="text_numeral_alt max-w-xl font-montserrat text-sm md:text-lg text-black/80">
                     No hace falta renovar todo. Solo elegir bien.
                 </span>
             </div>

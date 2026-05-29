@@ -1,6 +1,6 @@
 import { BDProducts } from "../../models/products.js";
 import { getStorage, createStorage, STORAGE_KEYS } from "../../util/storage.js";
- 
+
 /**
  * Devuelve los productos. Prioriza Storage; si no existe, usa BDProducts (seed).
  */
@@ -13,14 +13,14 @@ export function getPriceProducts() {
     createStorage(STORAGE_KEYS.PRODUCTS, BDProducts);
     return BDProducts;
 }
- 
+
 /**
  * Persiste un array completo de productos en Storage.
  */
 export function saveProducts(products) {
     createStorage(STORAGE_KEYS.PRODUCTS, products);
 }
- 
+
 /**
  * Actualiza un producto por ID y guarda. Devuelve el array actualizado.
  */
@@ -30,7 +30,7 @@ export function updateProductById(id, changes) {
     saveProducts(updated);
     return updated;
 }
- 
+
 /**
  * Elimina un producto por ID y guarda. Devuelve el array actualizado.
  */
@@ -40,7 +40,7 @@ export function deleteProductById(id) {
     saveProducts(updated);
     return updated;
 }
- 
+
 /**
  * Restaura los productos al estado original (BDProducts).
  */

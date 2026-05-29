@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="overflow-x-hidden">
@@ -24,7 +27,63 @@
 
     <script type="module" src="./infoCardProductDiscount.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script type="module" src="./home.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cormorant: ['"Cormorant Garamond"', 'serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        principal:  '#FAFAF8',
+                        alt:        '#F2F0EC',
+                        cards:      '#D6E8E2',
+                        btn:        '#5C7A6B',
+                        'title':    '#2E3D35',
+                        'title-alt':'#B89A6A',
+                        paragraph:  '#635C55',
+                        form:       '#C4BAB2',
+                        banner:     '#A8C4B8',
+                        'cta-alt':  '#D4B896',
+                        'num-alt':  '#5C7A6B',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Fondos */
+        .bg-principal   { background-color: #FAFAF8; }
+        .bg-alt         { background-color: #F2F0EC; }
+        .bg-cards       { background-color: #D6E8E2; }
+        .bg-info        { background-color: rgba(196, 186, 178, 0.2); }
+        .bg-entregado   { background-color: rgba(168, 196, 184, 0.5); }
+        .bg-encamino    { background-color: rgba(212, 184, 150, 0.5); }
+        .bg-procesando  { background-color: rgba(221, 219, 249, 0.5); }
+ 
+        /* Texto */
+        .text-title      { color: #2E3D35; }
+        .text-title-alt  { color: #B89A6A; }
+        .text-paragraph  { color: #635C55; }
+        .text-form       { color: #C4BAB2; }
+        .text-banner     { color: #A8C4B8; }
+        .text_cta_alt    { color: #D4B896; }
+        .text_numeral_alt{ color: #5C7A6B; }
+ 
+        /* Botones */
+        .bg-btn  { background-color: #5C7A6B; }
+        .text-btn{ color: #FFFFFF; }
+ 
+        /* Bordes */
+        .border-subrayado  { border-color: rgba(92, 122, 107, 0.5); }
+        .border-cards      { border-color: rgba(45, 41, 38, 0.10); }
+        .border-colection  { border-color: rgba(92, 122, 107, 1); }
+ 
+        /* Líneas */
+        .linea-primaria { background-color: rgba(92, 122, 107, 0.2); }
+    </style>
 </body>
 
 </html>
