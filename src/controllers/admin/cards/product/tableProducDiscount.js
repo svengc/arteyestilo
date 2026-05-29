@@ -1,15 +1,15 @@
 import { BDProducts } from "../../../../models/products.js";
 import { tableProductTemplate } from "./tableProducTemplate.js";
 
-export function adminTableProductsNormal() {
+export function adminTableProductsDiscount() {
 
     const container = document.querySelector(".cardProd-admin");
 
     if (!container) return;
 
-    // Filtrar SIN descuento
-    const normalProducts = BDProducts.filter(product => !product.discount);
+    // Filtrar CON descuento
+    const discountProducts = BDProducts.filter(product => product.discount);
 
-    container.innerHTML = tableProductTemplate(normalProducts);
+    container.innerHTML = tableProductTemplate(discountProducts);
 
 }

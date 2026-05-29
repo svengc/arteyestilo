@@ -1,5 +1,5 @@
 import { menuProdTemplate } from "./menuAdminTemplate.js";
-import { cardProdTemplate } from "../product/cardAdminTemplate.js";
+import { cardProdAdmin } from "../product/cardAdmin.js";
 
 export function menuAdmin() {
 
@@ -13,7 +13,13 @@ export function menuAdmin() {
 
     productCard.addEventListener("click", () => {
 
-        container.innerHTML = cardProdTemplate();
+        // Renderiza el siguiente step
+        container.innerHTML = `
+            <section class="cardProd-admin"></section>
+        `;
+
+        // Inicializa el panel productos
+        cardProdAdmin();
 
     });
 

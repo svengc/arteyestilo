@@ -1,5 +1,6 @@
 import { cardProdTemplate } from "./cardAdminTemplate.js";
 import { adminTableProductsNormal } from "./tableProduc.js";
+import { adminTableProductsDiscount } from "./tableProducDiscount.js";
 
 export function cardProdAdmin() {
 
@@ -7,16 +8,23 @@ export function cardProdAdmin() {
 
     if (!container) return;
 
-    // Render inicial
     container.innerHTML = cardProdTemplate();
 
-    // Seleccionar card
-    const tableProdCard = document.querySelector('[data-step="productsNormal"]');
+    // Productos normales
+    const normalCard = document.querySelector('[data-step="productsNormal"]');
 
-    // Evento click
-    tableProdCard.addEventListener("click", () => {
+    normalCard.addEventListener("click", () => {
 
         adminTableProductsNormal();
+
+    });
+
+    // Productos descuento
+    const discountCard = document.querySelector('[data-step="productsDiscount"]');
+
+    discountCard.addEventListener("click", () => {
+
+        adminTableProductsDiscount();
 
     });
 

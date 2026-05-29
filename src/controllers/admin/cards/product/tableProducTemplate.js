@@ -1,8 +1,14 @@
 export const tableProductTemplate = (products) => `
 
-<section class="w-full min-h-screen p-6 bg-gray-100">
+<section class="w-full max-h-screen p-6 bg-gray-100">
 
-    <div class="max-w-7xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+    <div class="flex items-center justify-between mb-6">
+        <a href="/src/controllers/admin/adminPage/admin.html" class="underline">
+            Volver
+        </a>
+    </div>
+
+    <div class="mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
 
         <div class="grid grid-cols-11 gap-4 bg-[#5C7A6B] text-white p-5 font-semibold text-sm uppercase tracking-wide">
 
@@ -15,14 +21,13 @@ export const tableProductTemplate = (products) => `
             <div>Material</div>
             <div>Estilo</div>
             <div>Stock</div>
-            <div>Destacado</div>
             <div>Acciones</div>
 
         </div>
 
         ${products.map(product => `
 
-            <div class="grid grid-cols-11 gap-4 items-center p-5 border-b">
+            <div class="grid grid-cols-10 gap-5 items-center p-5 border-b">
 
                 <div>${product.id}</div>
 
@@ -50,10 +55,6 @@ export const tableProductTemplate = (products) => `
                 <div>${product.style}</div>
 
                 <div>${product.stock}</div>
-
-                <div>
-                    ${product.featured ? "Sí" : "No"}
-                </div>
 
                 <div class="flex gap-2">
 
