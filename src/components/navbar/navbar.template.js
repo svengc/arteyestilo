@@ -199,7 +199,12 @@ export const navbarTemplateAbsolute = () => `
                         <p class="px-3 py-2 text-sm text-white/80">
                             Mi cuenta
                         </p>
-
+                        
+                        <a
+                            href="../../pages/auth/login.html"
+                            class="block rounded-xl px-3 py-3 text-xs uppercase tracking-widest text-white/90 hover:bg-white/10">
+                            Login
+                        </a>
                         <a
                             href="../account/myProfile.html"
                             class="block rounded-xl px-3 py-3 text-xs uppercase tracking-widest text-white/90 hover:bg-white/10">

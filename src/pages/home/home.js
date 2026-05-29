@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="max-w-6xl text-white font-cormorant font-bold 
                             text-3xl md:text-6xl leading-tight
                             text-center md:text-left
-                            opacity-0 translate-y-4 transition-all duration-1000">
+                             translate-y-4 transition-all duration-1000">
                         Decora como tú eres. Sin moldes, sin reglas.
                         <br>
                         <span class="block mt-2 font-montserrat font-normal 
